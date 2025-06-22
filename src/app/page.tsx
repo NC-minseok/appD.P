@@ -46,7 +46,7 @@ export default function Home() {
         <div className="text-center mb-8">
           <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-3xl flex items-center justify-center shadow-lg p-3">
             <Image
-              src="/대학캠퍼스 로고.png"
+              src="/logo.png"
               alt="NCMN 로고"
               width={72}
               height={72}
