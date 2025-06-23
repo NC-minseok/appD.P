@@ -19,7 +19,7 @@ export default function Home() {
   const handleDownload = (platform: "android" | "ios") => {
     const links = {
       android:
-        "https://drive.google.com/file/d/1vTg2_NdFXeW8Elsmhyy1tXGkakjLu0fL/view",
+        "https://drive.google.com/drive/folders/1eVtrhKUWr-4n-Sj9lauCmFlQXjZLFI14",
       ios: "https://testflight.apple.com/join/cV56naSP",
     };
 
