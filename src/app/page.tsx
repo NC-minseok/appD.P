@@ -19,7 +19,7 @@ export default function Home() {
   const handleDownload = (platform: "android" | "ios") => {
     const links = {
       android:
-        "https://drive.google.com/uc?export=download&id=1S5hExeS9z2IT16TH2Abp19SRgV2WVewr",
+        "https://drive.google.com/file/d/1vTg2_NdFXeW8Elsmhyy1tXGkakjLu0fL/view",
       ios: "https://testflight.apple.com/join/cV56naSP",
     };
 
@@ -35,7 +35,6 @@ export default function Home() {
             <h1 className="text-2xl font-bold text-pink-600 mb-1">
               NCMN 체리동아리
             </h1>
-            <p className="text-sm text-gray-600">NCMN 대학캠퍼스 주최</p>
           </div>
         </div>
       </header>
@@ -54,13 +53,8 @@ export default function Home() {
             />
           </div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">
-            체리동아리 테스트 앱
+            NCMN 체리동아리
           </h2>
-          <p className="text-gray-600 text-sm leading-relaxed">
-            NCMN 체리동아리 앱을 다운로드하여
-            <br />
-            새로운 기능을 미리 체험해보세요!
-          </p>
         </div>
 
         {/* Device Detection */}
@@ -156,10 +150,6 @@ export default function Home() {
             ✨ 테스트 앱 특징
           </h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-              <span className="text-gray-700">최신 기능 미리 체험</span>
-            </li>
             <li className="flex items-center gap-3">
               <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
               <span className="text-gray-700">동아리 활동 정보 확인</span>
