@@ -8,6 +8,8 @@ export default function Home() {
   const [userAgent, setUserAgent] = useState("");
   const [isAndroid, setIsAndroid] = useState(false);
   const [isIOS, setIsIOS] = useState(false);
+  const [isExistingUserOpen, setIsExistingUserOpen] = useState(false);
+  const [isLoginIssueOpen, setIsLoginIssueOpen] = useState(false);
 
   useEffect(() => {
     const ua = navigator.userAgent;
@@ -144,25 +146,103 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Features */}
+        {/* Login Guide */}
         <div className="bg-white rounded-2xl p-6 shadow-sm border border-pink-100">
-          <h3 className="font-semibold text-gray-800 mb-4">
-            ✨ 테스트 앱 특징
+          <h3 className="font-semibold text-gray-800 mb-4 text-red-600">
+            📋 필독
           </h3>
-          <ul className="space-y-3 text-sm">
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-              <span className="text-gray-700">동아리 활동 정보 확인</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-              <span className="text-gray-700">멤버들과 소통</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <span className="w-2 h-2 bg-pink-400 rounded-full"></span>
-              <span className="text-gray-700">정기적인 업데이트</span>
-            </li>
-          </ul>
+          <div className="space-y-3 text-sm">
+            {/* 기존 사역자 현황 조사 참여자 */}
+            <div className="border border-blue-200 rounded-lg overflow-hidden">
+              <button
+                onClick={() => setIsExistingUserOpen(!isExistingUserOpen)}
+                className="w-full p-4 bg-blue-50 hover:bg-blue-100 transition-colors duration-200 flex items-center justify-between text-left"
+              >
+                <span className="font-medium text-blue-800">
+                  기존 사역자현황 조사 참여자
+                </span>
+                <svg
+                  className={`w-5 h-5 text-blue-600 transition-transform duration-200 ${
+                    isExistingUserOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isExistingUserOpen && (
+                <div className="p-4 bg-white border-t border-blue-200">
+                  <div className="space-y-3 text-gray-700">
+                    <p>계정이 생성되어 있습니다.</p>
+                    <p>
+                      <span className="font-medium">전화번호</span>와 초기
+                      비밀번호{" "}
+                      <span className="font-mono bg-gray-100 px-2 py-1 rounded text-xs">
+                        Ncmn0214!
+                      </span>{" "}
+                      로 로그인 후<br />
+                      이메일 등록을 진행하면 접속 가능합니다.
+                    </p>
+                    <p className="text-red-600 font-medium">
+                      ⚠️ 보안을 위해 꼭 '더보기' → '내정보'에서
+                      <br />
+                      비밀번호 변경을 진행하세요.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* 로그인이 안 되는 경우 */}
+            <div className="border border-yellow-200 rounded-lg overflow-hidden">
+              <button
+                onClick={() => setIsLoginIssueOpen(!isLoginIssueOpen)}
+                className="w-full p-4 bg-yellow-50 hover:bg-yellow-100 transition-colors duration-200 flex items-center justify-between text-left"
+              >
+                <span className="font-medium text-yellow-800">
+                  로그인이 안 되는 경우
+                </span>
+                <svg
+                  className={`w-5 h-5 text-yellow-600 transition-transform duration-200 ${
+                    isLoginIssueOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isLoginIssueOpen && (
+                <div className="p-4 bg-white border-t border-yellow-200">
+                  <div className="space-y-3 text-gray-700">
+                    <p>
+                      전화번호와 비밀번호로 로그인이 안 될 경우
+                      <br />
+                      회원가입을 진행해주세요.
+                    </p>
+                    <p className="text-orange-600">
+                      회원가입 시 "이미 등록된 전화번호"라고 나오는 경우
+                      <br />
+                      관리자에게 문의해주세요.
+                    </p>
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </main>
 
