@@ -13,10 +13,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NCMN 체리동아리 - 테스트 앱",
+  title: "NCMN 체리동아리",
   description:
-    "NCMN 대학캠퍼스 체리동아리의 테스트 앱을 다운로드하여 새로운 기능을 미리 체험해보세요!",
-  keywords: "NCMN, 체리동아리, 테스트앱, 대학캠퍼스, 동아리",
+    "NCMN 체리동아리 공식 어플을 설치해보세요",
+  keywords: "NCMN, 체리동아리, 대학캠퍼스, 동아리",
 };
 
 export const viewport = {
