@@ -22,7 +22,7 @@ export default function Home() {
     const links = {
       android:
         "https://drive.google.com/drive/folders/1eVtrhKUWr-4n-Sj9lauCmFlQXjZLFI14",
-      ios: "https://testflight.apple.com/join/cV56naSP",
+      ios: "https://testflight.apple.com/join/3mR8pprE",
     };
 
     window.open(links[platform], "_blank");
